@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 import json
 from typing import List
 
-from models import Chat as ChatModel
+from models import ChatModel
 from schemas import ChatMsg, Chat
 from database import engine, SessionLocal, Base
 

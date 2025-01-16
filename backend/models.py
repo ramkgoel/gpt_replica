@@ -8,7 +8,7 @@ from database import Base
 def generate_uuid():
     return str(uuid.uuid4())
 
-class Chat(Base):
+class ChatModel(Base):
     """
     A single table 'chats' that stores:
         - chat_id: unique UUID. 
@@ -25,12 +25,12 @@ class Chat(Base):
 
 
 
-# https://medium.com/towards-data-engineering/fastapi-with-sql-1c7852ccbf21
-# In above code snippet, a SQLAlchemy database model class called 
-# User is defined, inheriting from the Base class, which was imported from a module named database we defined before. 
-# This class represents a database table named “users.” 
-# It contains four columns: id, name, email, and nickname. 
-# The id column is defined as an integer and serves as the primary key for the table, ensuring each row has a unique identifier. 
-# The other columns, name, email, and nickname, are defined as string fields. 
-# This class and its column definitions provide a structured blueprint for creating and interacting 
-# with a “users” table in the database using SQLAlchemy, specifying the data types and constraints for each column.
+
+# Base class and its column definitions provide a structured blueprint for creating and interacting 
+# with a table in the database using SQLAlchemy, specifying the data types and constraints for each column.
+
+# Each member of db is ChatModel
+
+# Note: 
+# - ChatModel's messages is a Text field. (Model) 
+# - Chat's messages is ChatMsg[]. (Schema)
